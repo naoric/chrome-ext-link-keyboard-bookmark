@@ -1,0 +1,13 @@
+@keyframes blink {
+    from {
+        background-color: #cacdbe;
+    }
+
+    to {
+        background-color: inherit;
+    }
+}
+
+.bookmarked {
+    animation: 100ms linear 0s infinite alternate blink;
+}

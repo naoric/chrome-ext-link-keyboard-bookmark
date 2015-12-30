@@ -1,0 +1,28 @@
+{
+  "manifest_version": 2,
+
+  "name": "Keyboard Bookmark Link",
+  "description": "Add link as bookmark by hovering it and using keyboard shortcut",
+  "version": "1.0",
+
+  "permissions": [
+    "activeTab",
+    "bookmarks",
+    "<all_urls>"
+  ],
+
+  "browser_action": {
+    "default_icon": "book45.png"
+  },
+  "content_scripts": [
+    {
+      "matches": ["<all_urls>"],
+      "css": ["action_style.css"],
+      "js": ["zepto.min.js", "ext.js"]
+    }
+  ],
+
+  "background": {
+    "scripts": ["background.js"]
+  }
+}
